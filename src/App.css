@@ -1,38 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #FBFADA;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  color: #fff;
+  margin-bottom: 0.5rem;
+  font-size: 1.75rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.TodoWrapper {
+  background: #12372A;
+  margin-top: 5rem;
+  padding: 2rem;
+  border-radius: 5px;
+  /* cursor: pointer; */
+  box-shadow: 0px 2px 5px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.TodoForm {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.todo-input {
+  cursor: text;
+  pointer-events: auto;
+  outline: none;
+  background: none;
+  border: 1px solid #FBFADA;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  width: 300px;
+  color: #FBFADA;
+  border-radius: 10px;
+}
+
+.todo-input::placeholder {
+  color:  #88927e;
+}
+
+.todo-btn {
+  cursor: pointer;
+  pointer-events: auto;
+  background: #FBFADA;
+  color: #12372A;
+  border: none;
+  padding: 0.55rem;
+  border-radius: 25px;
+  margin-left: 5px;
+}
+
+.todo-btn:hover{
+  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  transform: translateY(-0.25em);
+}
+
+.Todo {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background: #FBFADA;
+  color: #12372A;
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
 }
 
-.App-link {
-  color: #61dafb;
+.fa-trash {
+  margin-left: 0.75rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.incompleted {
+  color: #436850;
+  cursor: pointer;
+}
+
+.completed {
+  color: #436850;
+  text-decoration: line-through;
+  cursor: pointer;
+}
+
+.edit-icon,
+.delete-icon {
+  cursor: pointer;
 }
